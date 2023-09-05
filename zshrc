@@ -3,21 +3,11 @@ export PATH="/usr/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
-PROMPT="[%n @ %m] ~ "
-zstyle ':completion:*' list-prompt   ''
-zstyle ':completion:*' select-prompt ''
-
-# alias b='buku --suggest'
-# autoload -Uz $HOME/.zsh/completions/_buku
-# compdef _buku buku
-
-eval "$(atuin init zsh)"
+PROMPT="[%n @ %m] %~ "
 
 eval "$(atuin init zsh)"
 
 # aliases
 alias v="vim"
-alias ls="ls -lvah"
+alias ls="ls -lvah --color"
 alias python='python3'
-
-source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh

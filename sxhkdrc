@@ -10,19 +10,19 @@ super + e
 # 	dmenu_run -l 10
 
 super + a
-	urxvt -e sh -c "tmux attach || tmux"
+	kitty sh -c "tmux attach || tmux"
 
 super + r
-	urxvt -e "lf"
+	kitty --hold sh -c "lf"
 
 super + Return
 	rofi -show run
 
-Print
-	maim --select >> ~/screenshots/$(date +%Y-%m-%d_%H-%m-%S).png
-
 ctrl + Print
 	maim --select | xclip -selection clipboard -t image/png
+
+Print
+	maim >> ~/screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
 
 XF86Audio{Mute,RaiseVolume,LowerVolume}
 	pulsemixer {--toggle-mute,--change-volume +10 --max-volume 100,--change-volume -10}

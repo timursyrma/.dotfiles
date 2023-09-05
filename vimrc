@@ -3,6 +3,7 @@ filetype plugin indent on
 syntax on
 
 call plug#begin('~/.vim/plugged')
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
